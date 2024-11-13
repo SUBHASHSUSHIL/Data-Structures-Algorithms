@@ -1,0 +1,46 @@
+#. Stack And Heap:-
+=>
+1. Stack Memory:-
+Definition:- Stack memory ek section hai jo static memory allocation ke liye use hoti hai. Yeh memory ko sequential aur Last In, First Out (LIFO) order mein handle karta hai.
+
+Purpose:- Stack generally functions aur local variables ke liye use hoti hai, jo temporarily yaani function ke scope mein hi zaroori hote hain.
+
+#. Characteristics:-
+
+Speed:- Stack memory fast hoti hai, kyunki ismein memory ko sequential order mein allocate aur deallocate kiya jaata hai.
+Size:- Stack memory ka size limited hota hai, jo generally system architecture aur OS ke base par fix kiya jaata hai.
+Automatic Management:- Isme memory ko automatically manage kiya jaata hai, jaise function end hote hi variables stack se remove ho jaate hain.
+Usage:- Mainly primitive types (int, float, char, etc.) aur pointers ya references ko store karne ke liye use hota hai.
+
+#.Example:-
+void MyFunction() {
+    int a = 10; // 'a' stack memory mein allocate hoga
+}
+Yahan par a ek local variable hai jo MyFunction ke scope mein hi rahega aur function khatam hote hi stack se remove ho jayega.
+
+Purpose:-
+-> Stack memory access karna fast hai.
+-> Automatically memory handle hoti hai.
+Cons:
+Limited size ke wajah se large data structures ya dynamically sized data ko hold nahi kar sakta.
+
+2. Heap Memory:-
+=> Definition:- Heap memory dynamic memory allocation ke liye use hoti hai, jo run-time par allocate ki jaati hai aur programmer ke control mein hoti hai.
+
+Purpose:- Heap memory un objects ya data ke liye use hoti hai jo dynamically allocated hote hain aur function scope se independent hote hain.
+
+Characteristics:-
+Speed:- Stack se slow hota hai, kyunki isme memory allocation aur deallocation mein zyada time lagta hai.
+Size:- Heap memory ka size system architecture ke hisaab se large hota hai aur ye stack ke comparison mein kaafi flexible hota hai.
+Manual Management:- Heap mein allocated memory ko manually free karna padta hai. Languages like C, C++ mein, free() ya delete use karke memory ko free karna padta hai, jabki C# aur Java mein garbage collector automatically unused memory ko clear karta hai.
+Usage:- Large data structures (jaise arrays, linked lists), objects, aur pointers ko store karne ke liye use hota hai.
+
+Example:-
+class MyClass {
+    int[] arr = new int[1000]; // 'arr' heap memory mein allocate hoga
+}
+Yahan arr array dynamically heap mein allocate hoga aur jab tak program chal raha hai ya garbage collection nahi hoti, tab tak yeh memory mein bana rahega.
+
+Purpose:-
+->Large size hone ke wajah se heap mein large data structures ko store kiya ja sakta hai.
+->Flexible aur long-term data storage ke liye suitable hai.
